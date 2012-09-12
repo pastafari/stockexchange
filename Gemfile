@@ -52,3 +52,4 @@ gem "twitter-bootstrap-rails", ">= 2.1.3", :group => :assets
 gem "therubyracer", ">= 0.10.2", :group => :assets, :platform => :ruby
 gem "omniauth", ">= 1.1.1"
 gem "omniauth-facebook"
+gem "hub", ">= 1.10.2", :require => nil, :group => [:development]
