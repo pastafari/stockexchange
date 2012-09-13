@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_filter :require_login, :only => [:portfolio]
   def new
     @user = User.new
   end
@@ -11,6 +12,10 @@ class UsersController < ApplicationController
     else
       flash[:error] = "Something went wrong"
     end
+  end
+
+  def portfolio
+    @stocks = User.find(params[:user_id]).stocks
   end
 
   def show
