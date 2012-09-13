@@ -8,8 +8,7 @@
       %a.brand{:href => '/'}STOCK EXCHANGE
       %div.nav-collapse.collapse
         - if user_signed_in?
-          %p.pull-right
-            = "Welcome #{current_user.name}"
+          = render 'layouts/logged_in_dropdown'
         - else
           = render 'layouts/signin_signup_form'
         %ul.nav

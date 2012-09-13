@@ -1,0 +1,12 @@
+= provide(:title, 'StockExchange | Sign up')
+%div.row.span9.well
+  %p.alert.alert-success
+    Sign up for a free account!
+  %div
+    = simple_form_for(@user, :html => {:class => 'form-vertical' }) do |form|
+      = form.input :name
+      = form.input :email
+      = form.input :password
+      = form.input :password_confirmation, :label => "Confirm Password"
+      = form.submit "Sign Up", :class => 'btn btn-primary'
+      = submit_tag 'Cancel', :type => :reset, :class => "btn btn-danger"

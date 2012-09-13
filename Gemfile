@@ -6,6 +6,7 @@ gem 'jquery-rails'
 gem "thin", ">= 1.4.1"
 gem "haml", ">= 3.1.7"
 gem 'bcrypt-ruby'
+gem 'simple_form'
 
 group :assets do
   gem 'sass-rails', '~> 3.2.3'
