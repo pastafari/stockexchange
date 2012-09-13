@@ -12,5 +12,9 @@
         - else
           = render 'layouts/signin_signup_form'
         %ul.nav
-          %li.active
-            %a{:href => "/"}Home
+          %li
+            %a{:href => "/stocks"}Stocks
+          - if user_signed_in?
+            %li.divider-vertical
+            %li
+              %a{:href => user_portfolio_path(current_user)}Portfolio
