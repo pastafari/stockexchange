@@ -1,0 +1,13 @@
+#stocks.row-fluid
+  %table.table.table-striped.table-bordered
+    %thead
+      %tr
+        %th Stock Symbol
+        %th Company
+    %tbody
+      - @stocks.each do |stock|
+        %tr
+          %td
+            = stock.scrip
+          %td
+            = stock.name
