@@ -1,0 +1,16 @@
+.page-header
+  %h1.well.centered
+    Your Portfolio
+  - if @portfolio_stocks.empty?
+    .row
+      .alert.span9
+        %button.close{:type => "button", 'data-dismiss' => "alert"}
+          ×
+        %strong
+          Your Portfolio is currently empty. Go ahead and buy something!
+  - else
+    = render 'users/stocks_table'
+
+  = render 'users/portfolio_action_bar'
+
+

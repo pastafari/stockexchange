@@ -1,0 +1,13 @@
+#stocks.row-fluid
+  %table.table.table-striped.table-bordered
+    %thead
+      %tr
+        %th Stock
+        %th Quantity
+    %tbody
+      - @portfolio_stocks.each do |portfolio_stock|
+        %tr
+          %td
+            = portfolio_stock.stock.name
+          %td
+            = portfolio_stock.stock.amount

@@ -10,7 +10,7 @@ describe UsersController do
         get :portfolio, :user_id => user.id
       end
 
-      it { assigns(:stocks).should be }
+      it { assigns(:portfolio_stocks).should be }
       it { response.should be_success }
     end
 

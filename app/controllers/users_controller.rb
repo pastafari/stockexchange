@@ -15,7 +15,7 @@ class UsersController < ApplicationController
   end
 
   def portfolio
-    @stocks = User.find(params[:user_id]).stocks
+    @portfolio_stocks = User.find(params[:user_id]).portfolios
   end
 
   def show
