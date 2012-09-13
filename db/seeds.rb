@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+seed_files = [
+    Dir.glob(File.join(File.dirname(__FILE__), "seeds/common/*.rb")),
+    Dir.glob(File.join(File.dirname(__FILE__), "seeds/#{Rails.env}/*.rb"))
+]
+
+seed_files.flatten.each do |seed_file|
+  p "loading #{seed_file}"
+  load seed_file
+end
