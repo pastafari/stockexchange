@@ -26,10 +26,10 @@ group :test do
   gem "cucumber-rails", ">= 1.3.0", :require => false
   gem "database_cleaner", ">= 0.8.0"
   gem "launchy", ">= 2.1.2"
-
 end
 
 group :development, :test do
   gem "rspec-rails", ">= 2.11.0"
+  gem "shoulda-matchers"
   gem "factory_girl_rails", ">= 4.0.0"
 end
