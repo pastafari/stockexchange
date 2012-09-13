@@ -6,13 +6,14 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      redirect_to :controller => :sessions, :action => :create, :id => @user.id
+      session[:user_id] = @user.id
+      redirect_to @user
     else
       flash[:error] = "Something went wrong"
     end
   end
 
   def show
-    @user = User.find(params[:id])
+    @user ||= User.find(params[:id])
   end
 end
