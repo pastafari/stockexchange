@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
-gem 'sqlite3'
+
 gem 'jquery-rails'
 gem "thin", ">= 1.4.1"
 gem "haml", ">= 3.1.7"
@@ -16,6 +16,7 @@ group :assets do
 end
 
 group :development do
+  gem 'sqlite3'
   gem "heroku"
   gem "haml-rails", ">= 0.3.5"
   gem "hpricot", ">= 0.8.6"
@@ -34,4 +35,8 @@ group :development, :test do
   gem "rspec-rails", ">= 2.11.0"
   gem "shoulda-matchers"
   gem "factory_girl_rails", ">= 4.0.0"
+end
+
+group :production do
+  gem 'pg'
 end
